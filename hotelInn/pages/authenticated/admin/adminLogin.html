@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+   
+   position: absolute;
+   width: 100%;
+   padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.text {
+   position:  absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   text-align: left;
+   font-size: 20px;
+   color: black;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container"> 
+ <div class="text">
+ <form action="adminindex.html" method="post">
+  <fieldset>  
+    <legend>Login Panel:</legend>
+     <table>
+            <tr>
+                <td>User Name</td>
+                <td>:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:</td>
+                <td><input type="password"></td>
+            </tr>
+        </table>
+        <hr />
+        <input name="remember" type="checkbox">Remember Me
+        <br/><br/>
+        <input type="submit" value="Login">
+        <a href="forgot_password.html">Forgot Password?</a>
+	
+  </fieldset>
+ </form>
+ 
+ </div> 
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car Parking</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <table class="table" id="table1">
+                
+                <tr>
+                    <th>
+                        Plot Number
+                    </th>
+                    <th>
+                        Rent
+                    </th>
+                    <th>
+                        Floor Number
+                    </th>
+                </tr>   
+        </table>
+
+        <button onclick="addCheck()" class="btn btn-default">Add</button>
+        <input type="submit" class="btn btn-default"/>
+
+    </div>
+
+
+    </body>
+</html>
+
+<script>
+    var rid=0;
+    function addCheck()
+    {
+        var table=document.getElementById('table1');
+        var save=document.createElement('button');
+        var cancel=document.createElement('button');
+        
+        var row=document.createElement('tr');
+        rid++;
+        
+        var header1=document.createElement('td');
+        var header2=document.createElement('td');
+        var header3=document.createElement('td');
+        
+        row.setAttribute("id",rid);
+
+        var txt1=document.createElement('input');
+        var txt2=document.createElement('input');
+        var txt3=document.createElement('input');
+        var save=document.createElement('button');
+        var cancel=document.createElement('button');
+
+        save.setAttribute('class','btn btn-default');
+        cancel.setAttribute('class','btn btn-default');
+        cancel.setAttribute('onclick','cancel('+rid+')');
+
+        save.innerText="Save";
+        cancel.innerText="Cancel";
+        
+        txt1.setAttribute('class','form-control');
+        txt2.setAttribute('class','form-control');
+        txt3.setAttribute('class','form-control');
+
+        txt1.setAttribute('type','text');
+        txt2.setAttribute('type','text');
+        txt3.setAttribute('type','text');
+
+        header1.appendChild(txt1);
+        header2.appendChild(txt2);
+        header3.appendChild(txt3);
+
+
+        row.appendChild(header1);
+        row.appendChild(header2);
+        row.appendChild(header3);
+        row.appendChild(save);
+        row.appendChild(cancel);
+
+
+
+        table.appendChild(row);
+    }
+
+
+    function cancel(id)
+    {
+        var row1=document.getElementById(id);
+        var table=document.getElementById("table1");
+        table.removeChild(row1);
+
+    }
+</script>

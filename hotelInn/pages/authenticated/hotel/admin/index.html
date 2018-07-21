@@ -1,0 +1,145 @@
+<table width="100%" cellspacing="0" cellpadding="10" border="1">
+    <tr>
+        <td colspan="2" valign="middle" height="70">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <a href="account/dashboard.html" target="contentFrame">
+                            <img height="48" src="../../../../resources/images/logo.png">
+                        </a>
+                    </td>
+                    <td align="right">
+
+                        <a href="../../../index.html">Logout</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="200" valign="top">
+            <b>&nbsp;Admin</b><hr />
+            <ul>
+                    <li>
+                            <a href="Statistic.html" target="contentFrame">Dashboard</a>
+                            </li>
+                <li>
+				<a href="search.html" target="contentFrame">Search Users</a>
+				<img  align="center"  height="18" src="../../../../resources/images/search.png">
+
+				</li>
+				<li>
+				<a href="n/complain.html" target="contentFrame">Monitor Complain</a>
+				<img  align="center"  height="18" src="../../../../resources/images/give_complain.png">
+
+				</li>
+
+
+                <li>
+				<a href="profile.html" target="contentFrame">My Profile</a>
+				<img  align="center"  height="18" src="../../../../resources/images/my_profile.png">
+				</li>
+                <li>
+				<a href="edit_profile.html" target="contentFrame">Edit Profile</a>
+				<img  align="center"  height="18" src="../../../../resources/images/edit_profile.png">
+				</li>
+                <li>
+				<a href="picture.html" target="contentFrame">Change Profile Picture</a>
+				<img  align="center"  height="18" src="../../../../resources/images/change_picture.png">
+				</li>
+        <li>
+				<a href="change_password.html" target="contentFrame">Change Password</a>
+				<img  align="center"  height="25" src="../../../../resources/images/password_change.png">
+				</li>
+        <li>
+				<a href="HotelAdminRoomCategory.html" target="contentFrame">Room Category</a>
+				</li>
+
+        <li>
+				<a href="HotelAdminRooms.html" target="contentFrame">Rooms</a>
+				</li>
+        <li>
+				<a href="HotelAdminFood.html" target="contentFrame">Food</a>
+                </li>
+
+                <li>
+                    <a href="CarParking.html" target="contentFrame">Car Parking</a>
+                </li>
+
+                <li onclick="history()">History</li>
+                <ul id="list" >
+                    
+                </ul>
+ 
+                
+                
+                <li>
+				<a href="../../../index.html">Logout</a>
+				</li>
+            </ul>
+
+        </td>
+        <td valign="top">
+            <iframe name="contentFrame" frameborder="0" width="80%" height="530" src="dashboard.html"></iframe>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            Copyright &copy; 2017
+        </td>
+    </tr>
+</table>
+
+<script>
+    var flag=0;
+    var flag1=0;
+    function history(){
+        var ulist=document.getElementById("list");
+        ulist.setAttribute("style","display:block;");
+        if(flag1==0)
+        {
+            var list1=document.createElement('li');
+            var list2=document.createElement('li');
+            var list3=document.createElement('li');
+
+            var link1=document.createElement('a');
+            var link2=document.createElement('a');
+            var link3=document.createElement('a');
+
+            link1.setAttribute("href",'foodhistory.html');
+            link2.setAttribute("href",'roomhistory.html');
+            link3.setAttribute("href",'parkinghistory.html');
+
+            link1.setAttribute("target",'contentFrame');
+            link2.setAttribute("target",'contentFrame');
+            link3.setAttribute("target",'contentFrame');
+
+            link1.innerText="Food History";
+            link2.innerText="Room History";
+            link3.innerText="Parking History";
+
+            list1.appendChild(link1);
+            list2.appendChild(link2);
+            list3.appendChild(link3);
+
+            ulist.appendChild(list1);
+            ulist.appendChild(list2);
+            ulist.appendChild(list3);
+            flag1++;
+        }
+        if(flag==0)
+        {
+            ulist.setAttribute("style","display:block;");
+            flag=1;
+        }
+        else{
+            ulist.setAttribute("style","display:none;");
+            flag=0;
+        }
+   
+    }
+    
+
+</script>
